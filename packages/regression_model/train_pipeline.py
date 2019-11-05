@@ -1,7 +1,7 @@
-import pathlib
+import pathlib # For managing system path: a more modern and an alternative to os.path module)
 
 
-PACKAGE_ROOT = pathlib.Path(__file__).resolve().parent
+PACKAGE_ROOT = pathlib.Path(__file__).resolve().parent # (resolve) standardize the path and (parent) returns the root directory of __file__
 TRAINED_MODEL_DIR = PACKAGE_ROOT / 'trained_models'
 DATASET_DIR = PACKAGE_ROOT / 'datasets'
 
@@ -10,6 +10,7 @@ TRAINING_DATA_FILE = DATASET_DIR / 'train.csv'
 TARGET = 'SalePrice'
 
 
+# Features we will be pulling out from the train.csv
 FEATURES = ['MSSubClass', 'MSZoning', 'Neighborhood', 'OverallQual',
             'OverallCond', 'YearRemodAdd', 'RoofStyle', 'MasVnrType',
             'BsmtQual', 'BsmtExposure', 'HeatingQC', 'CentralAir',
@@ -26,6 +27,7 @@ def save_pipeline() -> None:
     pass
 
 
+# This function relies on code from the pipeline.py module
 def run_training() -> None:
     """Train the model."""
 

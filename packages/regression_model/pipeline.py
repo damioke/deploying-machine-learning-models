@@ -1,6 +1,6 @@
-from sklearn.pipeline import Pipeline
+from sklearn.pipeline import Pipeline # used to define transformation
 
-import preprocessors as pp
+import preprocessors as pp #  a module (preprocessors.py) we've created for all transformation/preprocessing
 
 
 CATEGORICAL_VARS = ['MSZoning',
